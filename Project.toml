@@ -1,6 +1,6 @@
-name = "Clipper"
+name = "easyClipper"
 uuid = "2f7d544a-b599-11e8-04f4-797375a45b81"
-authors = ["tucker_g <gregory.tucker@psi.ch>"]
+authors = ["Gregory Tucker <gregory.tucker@gmail.com>"]
 version = "0.1.0"
 
 [deps]
