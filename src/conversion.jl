@@ -15,7 +15,7 @@ function _scale_j2c(x::Vector{Z},minx::Z,width::Z) where Z<:NTuple{2,T} where T
 	ix = hcat( [[z...] for z in x]... ) # 2×length(x) Array
 	maxi,o,t=maxCint_one_two(T)
 	sx = maxi*(2*(ix.-minx)./width .- 1) # broadcast works for (Array,NTuple)
-	cx = Ary{Cint}(undef,size(sx))
+	cx = Array{Cint}(undef,size(sx))
 	tb=sx.>maxi; ts=sx.<-maxi;
 	cx[tb].=maxi; cx[ts].=-maxi
 	representable = .~(tb.|ts)
